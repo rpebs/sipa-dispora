@@ -71,3 +71,22 @@ hr {
   max-width: 500px;
   height: auto;
 }
+
+.box {
+  position: absolute;
+  max-width: 624px;
+  width: 80%;
+  height: 471px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(124, 163, 190, 0.26);
+  box-shadow: 0px 5px 12px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 780px) {
+  .box {
+    height: 400px;
+  }
+}
