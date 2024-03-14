@@ -38,6 +38,16 @@
         color: white;
       }
 
+      .quotes {
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        opacity: 0; /* Awalnya atur opacity menjadi 0 */
+        transition: opacity 1s ease-in-out; /* Animasi perubahan opacity selama 1 detik */
+      }
+      .quotes.loaded {
+        opacity: 1; /* Setelah dimuat, atur opacity menjadi 1 */
+      }
+
       @media only screen and (max-width: 768px) {
         body {
           background-image: url("img/bg-mobile.png");
@@ -61,6 +71,15 @@
     <div class="container">
       <h1 class="text-white">Hitung Mundur Hari Raya Idul Fitri</h1>
       <div id="countdown"></div>
+      <h5
+        class="quotes"
+        style="
+          color: white;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        "
+      >
+        "Saya Ramadhany sekeluarga mengucapkan mohon maaf lahir dan batin"
+      </h5>
       <h6
         class="footer"
         style="
@@ -102,6 +121,11 @@
 
       // Mulai hitung mundur saat halaman dimuat
       hitungMundur();
+
+      window.addEventListener("load", function () {
+        const quotesElement = document.querySelector(".quotes");
+        quotesElement.classList.add("loaded"); // Menambah kelas 'loaded' setelah halaman dimuat
+      });
     </script>
   </body>
 </html>
