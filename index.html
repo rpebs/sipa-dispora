@@ -12,37 +12,35 @@
     <title>Hitung Mundur Hari Raya Idul Fitri</title>
     <style>
       body {
+        margin: 0; /* menghapus margin default */
+        padding: 0; /* menghapus padding default */
         font-family: "Sofia", cursive;
         font-weight: 400;
         font-style: normal;
         text-align: center;
-        background: url("img/ramadan_card_vector.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
+        background: url("img/ramadan_card_vector.jpg") no-repeat center center
+          fixed; /* agar gambar tetap saat di-scroll */
+        background-size: cover; /* mengatur agar gambar selalu mencakup seluruh halaman */
       }
 
       #countdown {
         font-size: 24px;
         font-weight: bold;
         margin-top: 20px;
-      }
-      .text-white {
-        color: white;
+        color: white; /* menambahkan warna teks putih */
       }
 
       .container {
         margin-top: 25%;
       }
 
+      .text-white {
+        color: white;
+      }
+
       @media only screen and (max-width: 768px) {
         body {
           background-image: url("img/bg-mobile.png");
-          font-family: "Sofia", cursive;
-          font-weight: 400;
-          font-style: normal;
-          text-align: center;
-          background-size: cover;
-          background-repeat: no-repeat;
         }
         h1 .text-white {
           color: white;
@@ -62,7 +60,7 @@
   <body>
     <div class="container">
       <h1 class="text-white">Hitung Mundur Hari Raya Idul Fitri</h1>
-      <div id="countdown" class="text-white"></div>
+      <div id="countdown"></div>
       <h6
         class="footer"
         style="
